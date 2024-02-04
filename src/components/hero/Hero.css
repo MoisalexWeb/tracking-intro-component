@@ -1,0 +1,219 @@
+.hero {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 350px;
+    background-color: var(--light-grayish-blue);
+    z-index: -1;
+    pointer-events: none;
+    border-bottom-left-radius: 50px;
+}
+
+.hero__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-img {
+    width: 120%;
+}
+
+.hero__texts {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.hero__texts-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+    font-size: 17px;
+    color: var(--grayish-blue);
+}
+
+.hero__texts-subtitle span {
+    color: var(--light-grayish-blue);
+    background-color: var(--very-dark-blue);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.hero__texts-title {
+    text-transform: uppercase;
+    color: var(--very-dark-blue);
+    font-size: 35px;
+}
+
+.hero__texts-paragraph {
+    font-size: 18px;
+    color: var(--dark-grayish-blue);
+    max-width: 220px;
+}
+
+.hero__texts__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: max-content;
+}
+
+.hero__texts__btns-btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: none;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--grayish-blue);
+    cursor: pointer;
+}
+
+.hero__texts__btns-btn.hero__texts__btns-btn--red {
+    background-color: var(--red);
+    color: var(--light-grayish-blue);
+    transition: opacity 0.3s ease;
+}
+
+.hero__texts__btns-btn.hero__texts__btns-btn--red:hover {
+    opacity: 0.8;
+}
+
+
+/* Acomodando el rectangulo gris */
+@media screen and (min-width: 400px) {
+    .hero::after {
+        height: 400px;
+    }
+}
+
+/* Acomodando el rectangulo gris */
+@media screen and (min-width: 530px) {
+    .hero::after {
+        height: 450px;
+    }
+
+    .hero__texts {
+        grid-gap: 15px;
+    }
+}
+
+/* Acomodando el rectangulo gris y otros estilos */
+@media screen and (min-width: 620px) {
+    .hero::after {
+        height: 430px;
+    }
+
+    .hero__texts {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-img {
+        display: block;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .hero {
+        padding-top: 180px;
+    }
+
+    .hero::after {
+        height: 350px;
+    }
+
+    .hero__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    .hero-img {
+        width: 170%;
+        max-width: initial;
+    }
+
+    .hero__texts {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 0;
+        width: 100%;
+        grid-gap: 25px;
+        height: max-content;
+        align-self: center;
+    }
+
+    .hero__texts-title {
+        font-size: 45px;
+    }
+
+    .hero__texts-subtitle {
+        letter-spacing: 4px;
+    }
+
+    .hero__texts-subtitle span {
+        letter-spacing: 2px;
+    }
+
+    .hero__texts-paragraph {
+        font-size: 20px;
+        max-width: 250px;
+    }
+
+    .hero__texts__btns {
+        grid-template-columns: repeat(2, max-content);
+        margin-top: 50px;
+    }
+
+    .hero__texts__btns-btn {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .hero__texts__btns-btn.hero__texts__btns-btn--red {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        padding-top: 140px;
+    }
+
+    .hero__container {
+        grid-gap: 70px;
+    }
+
+    .hero__texts-title {
+        font-size: 50px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (min-width: 1480px) {
+    .hero-img {
+        width: 100%;
+        max-width: initial;
+    }
+}
