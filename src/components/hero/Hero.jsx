@@ -1,5 +1,5 @@
 import "./Hero.css"
-import heroImg from "../../images/illustration-devices.svg"
+import heroImg from "/images/illustration-devices.svg"
 
 const Hero = () => {
   return (

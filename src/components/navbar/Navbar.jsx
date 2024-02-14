@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import "./Navbar.css"
-import logo from "../../images/logo.svg"
-import menuHamburger from "../../images/icon-hamburger.svg"
-import menuClose from "../../images/icon-close.svg"
+import logo from "/images/logo.svg"
+import menuHamburger from "/images/icon-hamburger.svg"
+import menuClose from "/images/icon-close.svg"
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
